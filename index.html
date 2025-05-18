@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jason A. Charles - Resume</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -26,63 +27,107 @@
   </nav>
 
   <div class="container mt-5">
-    <section id="summary">
+    <section id="summary" class="mb-5">
       <h2>Summary</h2>
-      <p>Motivated and creative computer science student with full-stack web development experience and a passion for data visualization, front-end performance, and teaching STEM to youth. Experienced in professional and startup environments using tools like React Native, PostgreSQL, and APIs.</p>
+      <p class="lead">Motivated and creative computer science student with full-stack web development experience and a passion for data visualization, front-end performance, and teaching STEM to youth.</p>
     </section>
 
-    <section id="education" class="mt-4">
+    <section id="education" class="mb-5">
       <h2>Education & Training</h2>
-      <p><strong>B.S., Computer Science</strong> — Brooklyn College, CUNY (Expected May 2025)</p>
-      <ul>
-        <li>Relevant Coursework: Data Structures, Machine Learning, Calculus II, Probability and Statistics, Linear Algebra, Databases</li>
-      </ul>
-      <p><strong>Tech Talent Pipeline Residency Program</strong> — New York, NY (Jan 2022 – Present)</p>
-      <ul>
-        <li>Hands-on training in full-stack development using React Native, NodeJS, APIs, PostgreSQL, Sequelize, and more</li>
-      </ul>
-      <p><strong>BASTA Career Prep Fellowship</strong> — New York, NY (Dec 2022 – Present)</p>
-      <ul>
-        <li>Rigorous program supporting first-gen college students in landing strong entry-level tech roles</li>
-      </ul>
+      <div class="accordion" id="eduAccordion">
+        <div class="accordion-item">\          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+              Brooklyn College, CUNY
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#eduAccordion">
+            <div class="accordion-body">
+              B.S. in Computer Science (Expected May 2025)<br>
+              Relevant Coursework: Data Structures, Machine Learning, Linear Algebra
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+              Tech Talent Pipeline Residency Program
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#eduAccordion">
+            <div class="accordion-body">
+              Training in full-stack dev with React Native, APIs, PostgreSQL, Sequelize.
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="experience" class="mt-4">
+    <section id="experience" class="mb-5">
       <h2>Experience</h2>
-      <h5>Women in Consumer Finance (WCF) — Remote</h5>
-      <p><em>Data Analyst / Front-End Developer</em> (Feb 2024 – Present)</p>
-      <ul>
-        <li>Built live Google Looker dashboards from 4 connected Sheets for event tracking, revenue, and traffic</li>
-        <li>Improved web UX by fixing display bugs, optimizing across iOS, Android, tablets, and desktop</li>
-      </ul>
-      <h5>Guava Banking Company — Remote</h5>
-      <p><em>Full-Stack Software Engineer</em> (Aug – Nov 2023)</p>
-      <ul>
-        <li>Redesigned mobile and web UI; enhanced UX based on direct collaboration with CEO/CTO</li>
-        <li>Queried real-time user metrics via PostgreSQL & Blazer from 50+ user community</li>
-      </ul>
-      <p><em>Front-End Software Engineering Intern</em> (Jun – Aug 2022)</p>
-      <ul>
-        <li>Developed React Native/ReactJS onboarding and beneficiary displays</li>
-        <li>Improved loading UX with feedback indicators, fixed critical bugs</li>
-      </ul>
-      <h5>New York Junior Tennis & Learning — Brooklyn, NY</h5>
-      <p><em>STEM Tutor</em> (Sep 2022 – Present)</p>
-      <ul>
-        <li>Teach 20–30 students (ages 5–10) coding with Scratch and provide homework support across subjects</li>
-      </ul>
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#expWCF">
+          WCF – Data Analyst / Front-End Dev
+        </a>
+        <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#expGuava">
+          Guava – Full-Stack / Front-End Intern
+        </a>
+        <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#expTutor">
+          NYJTL – STEM Tutor
+        </a>
+      </div>
+
+      <!-- Modals for experience -->
+      <div class="modal fade" id="expWCF" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">WCF – Data Analyst / Front-End Developer</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              Built live dashboards with Looker, improved site UX and accessibility.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="expGuava" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Guava – Software Engineer</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              Rebuilt UI with React Native/JS, queried user metrics, debugged loading UX.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="expTutor" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">STEM Tutor</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              Taught students coding with Scratch; supported homework and engagement.
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="skills" class="mt-4">
+    <section id="skills" class="mb-5">
       <h2>Skills</h2>
-      <ul>
-        <li><strong>Languages:</strong> Java, C++, JavaScript, HTML, CSS, R, Python</li>
-        <li><strong>Frameworks:</strong> React Native, Redux, ReactJS, Express</li>
-        <li><strong>Tools:</strong> Node.js, REST APIs, PostgreSQL, Sequelize, Heroku, Git/GitHub</li>
-      </ul>
+      <div class="row">
+        <div class="col-md-4"><strong>Languages:</strong><br>Java, C++, JavaScript, HTML, CSS, R, Python</div>
+        <div class="col-md-4"><strong>Frameworks:</strong><br>React Native, Redux, ReactJS, Express</div>
+        <div class="col-md-4"><strong>Tools:</strong><br>Node.js, REST APIs, PostgreSQL, Sequelize, Git</div>
+      </div>
     </section>
 
-    <section id="portfolio" class="mt-4">
+    <section id="portfolio" class="mb-5">
       <h2>Portfolio</h2>
       <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
